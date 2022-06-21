@@ -1,0 +1,7 @@
+<!-- EDIT NOTA CON BINDEO A FORM NOTA (TEMPLATE DRIVEN FORM) -->
+<p class="text-center">Editar Nota versión 2</p>
+<br>
+<p> {{nota.title}} </p>
+<app-form-nota (enviarNota)="edit($event)" [receivedNota]="this.nota" ></app-form-nota>
+
+

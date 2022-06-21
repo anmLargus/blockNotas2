@@ -9,6 +9,21 @@
       "id": 2,
       "title": "segundo post",
       "body": "Funcioná por favor!"
+    },
+    {
+      "id": 3,
+      "title": "Nota Nueva",
+      "body": "Intentaremos incorporar sistema de autenticación con jwt"
+    },
+    {
+      "id": 4,
+      "title": "BORRAME",
+      "body": "añldfjañsldfkjasñldfkj"
+    },
+    {
+      "id": 5,
+      "title": "Borrame Please",
+      "body": "Funcioná please v3!"
     }
   ]
 }

@@ -37,7 +37,7 @@ export class BlockNotasComponent implements OnInit {
 
   edit(nota: Nota): void {
     console.log("BOTON EDIT")
-    //this.router.navigateByUrl(`/principalNotas/${nota.id}/editNota`);
+    this.router.navigateByUrl(`/blockNotas/${nota.id}/editNota`);
   }
 
   delete(nota: Nota) {
