@@ -1,0 +1,14 @@
+{
+  "notas": [
+    {
+      "id": 1,
+      "title": "Primer Post",
+      "body": "hola mundo!"
+    },
+    {
+      "id": 2,
+      "title": "segundo post",
+      "body": "Funcioná por favor!"
+    }
+  ]
+}

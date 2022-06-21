@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="d-flex justify-content-around">
+    <button class="btn btn-success" (click)="gotoAdd()">Agregar Nota</button>
+
+  </div>
+  <hr>
+  <div>
+    <app-nota1 
+      *ngFor="let nota of notas; let i = index" 
+      [nota]="nota" 
+      (onDeleteNota)="delete(nota)"
+      (onEditNota)="edit(nota)"
+      (onViewNota)="view(nota)"
+
+    >
+    </app-nota1>
+
+
+  </div>
+
+</div>
+
