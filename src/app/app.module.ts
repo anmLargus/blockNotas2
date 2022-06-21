@@ -11,6 +11,7 @@ import { ErrorComponent } from './pages/error/error.component';
 import { BlockNotasComponent } from './pages/block-notas/block-notas.component';
 import { ReadmeComponent } from './pages/readme/readme.component';
 import { Nota1Component } from './components/nota1/nota1.component';
+import { DetalleNotaComponent } from './pages/detalle-nota/detalle-nota.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { Nota1Component } from './components/nota1/nota1.component';
     ErrorComponent,
     BlockNotasComponent,
     ReadmeComponent,
-    Nota1Component
+    Nota1Component,
+    DetalleNotaComponent
   ],
   imports: [
     BrowserModule,

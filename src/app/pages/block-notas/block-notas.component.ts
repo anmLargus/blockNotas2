@@ -32,7 +32,7 @@ export class BlockNotasComponent implements OnInit {
     //   
     this.notaActual = nota ;
     console.log(this.notaActual)  
-    this.router.navigateByUrl(`/principalNotas/${nota.id}`) ;
+    this.router.navigateByUrl(`/blockNotas/${nota.id}`) ;
   }
 
   edit(nota: Nota): void {
