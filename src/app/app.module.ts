@@ -16,6 +16,7 @@ import { FormNotaComponent } from './components/form-nota/form-nota.component';
 import { AddNotaComponent } from './pages/add-nota/add-nota.component';
 import { EditNotaComponent } from './pages/edit-nota/edit-nota.component';
 import { FormsModule } from '@angular/forms';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { FormsModule } from '@angular/forms';
     DetalleNotaComponent,
     FormNotaComponent,
     AddNotaComponent,
-    EditNotaComponent
+    EditNotaComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

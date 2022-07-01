@@ -3,7 +3,8 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Nota } from '../models/nota';
 
-const apiUrl = "http://localhost:3000/notas"
+//const apiUrl = "http://localhost:3000/notas" // Descomentar y Comentar el correspondiente
+const apiUrl = "http://localhost:8081/notas"
 
 const httpOptions = {
   headers: new HttpHeaders( {'Content-type': 'application/json'} )
