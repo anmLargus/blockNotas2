@@ -16,6 +16,8 @@ const httpOptions = {
 export class NotaService {
 
   constructor( private http: HttpClient ) { }
+ 
+// Ver si a los métodos les falta que envien el jwt en cada peticion
 
   getAll(): Observable<Nota[]> {
     return this.http.get<Nota[]>(apiUrl)

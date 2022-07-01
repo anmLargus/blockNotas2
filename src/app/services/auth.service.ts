@@ -16,7 +16,7 @@ export class AuthService {
   constructor( private http: HttpClient ) { }
 
   login(usuario: string, clave: string): Observable<boolean> {
-    return this.http.post( LOGIN_ENDPOINT, {usuario , clave})
+    return this.http.post( LOGIN_ENDPOINT, {usuario , clave}) // En el backend espera recibir con esos nombres
       .pipe(map( (res: any) => {
         try {
           if(res?.token) {
