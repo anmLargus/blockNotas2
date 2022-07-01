@@ -15,8 +15,9 @@ import { DetalleNotaComponent } from './pages/detalle-nota/detalle-nota.componen
 import { FormNotaComponent } from './components/form-nota/form-nota.component';
 import { AddNotaComponent } from './pages/add-nota/add-nota.component';
 import { EditNotaComponent } from './pages/edit-nota/edit-nota.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     FormNotaComponent,
     AddNotaComponent,
     EditNotaComponent,
-    NavbarComponent
+    NavbarComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +41,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     NgbModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

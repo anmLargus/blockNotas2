@@ -1,0 +1,37 @@
+<div class="full">
+  <div class="container-fluid">
+      <div class="row m-5">
+      <div class="col col-sm-6 col-md-4 rounded border border-dark mx-auto" id="recuadro">
+          <form class="p-2 m-2" [formGroup]="form" (ngSubmit)="login()">
+              <div class="">
+                  <h5>Usuario</h5>
+                  <label for="usuario"></label>                    
+                  <input type="text" formControlName="usuario" 
+                          ngbPopover="Coloque su nombre de usuario" 
+                          triggers="mouseenter:mouseleave" popoverTitle="Login"
+                          > <!--name y id no son necesarios acá-->
+              </div>
+              <br>
+              <div class="">
+                  <h5>Password</h5>
+                  <label for="password"></label>
+                  
+                  <input type="password" name="password" id="password" formControlName="password"
+                          ngbPopover="El password debe tener entre 6 y 12 caracteres. Solo letras, mayúsculas y números." 
+                          triggers="mouseenter:mouseleave" popoverTitle="Password" 
+                          placement="end" 
+                          [closeDelay]="5000"
+                  >
+              </div>
+              
+              <hr>
+              <div>
+                  <button class="btn btn-primary" [disabled]="form.invalid">Ingresar</button>
+              </div>
+              
+          </form>
+      </div>
+      </div>
+  </div>    
+
+</div>
