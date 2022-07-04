@@ -43,6 +43,7 @@ export class LoginComponent implements OnInit {
           console.log (data);
           if(data) {
             this.router.navigate(['/blockNotas']);// 
+            console.log(this.authService.getToken());
           } else {
             //Informar al usuario que no se pudo loguear
             console.log("No se pudo loguear");

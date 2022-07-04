@@ -21,6 +21,7 @@ export class AuthService {
         try {
           if(res?.token) {
             localStorage.setItem(TOKEN_KEY, res.token);
+            
           } 
           return true;
         } catch (error) {
@@ -36,6 +37,10 @@ export class AuthService {
   isLogged(): boolean {
     // Debe chequearse que exista el token en el localStorage y tambien chequear claims
     return localStorage.getItem(TOKEN_KEY) !== null;
+  }
+
+  getToken() {
+    return localStorage.getItem(TOKEN_KEY);
   }
   
 }
