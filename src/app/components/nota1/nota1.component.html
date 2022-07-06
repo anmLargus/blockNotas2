@@ -11,8 +11,9 @@
   <div class="col-3">
     <button class="btn btn-info" (click)="onView(nota)">View</button>
     <button class="btn btn-warning" (click)="onEdit(nota)">Edit</button>
-    <button class="btn btn-danger" (click)="onDelete(nota)">Delete</button>
-
+    <button class="btn btn-danger" (click)="onDelete(nota)" *ngIf="sePuedeEditar">Delete</button>
+    <button class="btn btn-orange" (click)="onMensaje()" *ngIf="!sePuedeEditar">¿Quiere borrar?</button>
   </div>
+  
 </div>
 <br>

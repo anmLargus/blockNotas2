@@ -11,7 +11,8 @@
       (onDeleteNota)="delete(nota)"
       (onEditNota)="edit(nota)"
       (onViewNota)="view(nota)"
-
+      [sePuedeEditar]="isLogged"
+      (mensaje)="mostrarMensaje()"
     >
     </app-nota1>
 

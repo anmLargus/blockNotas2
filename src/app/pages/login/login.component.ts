@@ -40,7 +40,8 @@ export class LoginComponent implements OnInit {
     this.authService.login(usuario, password)
       .subscribe({
         next: (data:any) => { 
-          console.log (data);
+          console.log(data);
+          console.log(data.jwtToken);
           if(data) {
             this.router.navigate(['/blockNotas']);// 
             console.log(this.authService.getToken());

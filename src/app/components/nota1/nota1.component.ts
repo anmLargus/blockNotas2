@@ -9,10 +9,12 @@ import { Nota } from 'src/app/models/nota';
 export class Nota1Component implements OnInit {
 
   @Input() nota: Nota = new Nota();  //notas[0];
+  @Input() sePuedeEditar: boolean = false;
 
   @Output() onDeleteNota: EventEmitter<Nota> = new EventEmitter();
   @Output() onViewNota: EventEmitter<Nota> = new EventEmitter();
   @Output() onEditNota: EventEmitter<Nota> = new EventEmitter();
+  @Output() mensaje: EventEmitter<null> = new EventEmitter();
 
   constructor() { }
 
@@ -29,6 +31,10 @@ export class Nota1Component implements OnInit {
 
   onDelete(nota: Nota) {
     this.onDeleteNota.emit(nota);
+  }
+
+  onMensaje() {
+    this.mensaje.emit();
   }
 
 }

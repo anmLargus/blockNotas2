@@ -18,11 +18,12 @@ export class HeadersInterceptor implements HttpInterceptor {
     if ( this.auth.isLogged() ) {
       request = request.clone({
         setHeaders: {
-          Authorization: `Bearer $(this.auth.getToken())`,  
+          Authorization: `Bearer ${this.auth.getToken()}`  
         }
       });
     }
 
     return next.handle(request);
   }
+  
 }

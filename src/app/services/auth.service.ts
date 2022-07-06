@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
 
-const LOGIN_ENDPOINT = "http://localhost:8081/login";
+const LOGIN_ENDPOINT = "http://localhost:8082/login";
 
 const TOKEN_KEY = 'token';
 
@@ -19,10 +19,11 @@ export class AuthService {
     return this.http.post( LOGIN_ENDPOINT, {usuario , clave}) // En el backend espera recibir con esos nombres
       .pipe(map( (res: any) => {
         try {
-          if(res?.token) {
-            localStorage.setItem(TOKEN_KEY, res.token);
+          if(res?.jwtToken) {
+            localStorage.setItem(TOKEN_KEY, res.jwtToken);
             
           } 
+          console.log("token: " + this.getToken())
           return true;
         } catch (error) {
           return false;
@@ -32,6 +33,7 @@ export class AuthService {
 
   logout(): void {
     localStorage.removeItem(TOKEN_KEY);
+    console.log("removido el token")
   }
 
   isLogged(): boolean {

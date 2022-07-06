@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-readme',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReadmeComponent implements OnInit {
 
-  constructor() { }
+  constructor( private auth: AuthService ) { }
 
   ngOnInit(): void {
+    console.log("Esta logueado?: " + this.auth.isLogged());
+  }
+
+  logout() {
+    console.log("apretó logout");
+    this.auth.logout();
   }
 
 }

@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { Nota } from '../models/nota';
 
 //const apiUrl = "http://localhost:3000/notas" // Descomentar y Comentar el correspondiente
-const apiUrl = "http://localhost:8081/notas"
+const apiUrl = "http://localhost:8082/notas"
 
 const httpOptions = {
   headers: new HttpHeaders( {'Content-type': 'application/json'} )
@@ -17,8 +17,6 @@ export class NotaService {
 
   constructor( private http: HttpClient ) { }
  
-// Ver si a los métodos les falta que envien el jwt en cada peticion
-
   getAll(): Observable<Nota[]> {
     return this.http.get<Nota[]>(apiUrl)
   }
