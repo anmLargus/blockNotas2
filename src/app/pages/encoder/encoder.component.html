@@ -1,0 +1,42 @@
+<div>
+<h4 class="text-center">BCrypt encoder</h4>
+<br>
+<p>Ver demo. La palabra está en el backend. Ver resultado por consola de spring boot y de navegador</p>
+<br>
+<button class="btn btn-info" (click)="verDemo()">Demo</button>
+<div class="border border-primary"><p>{{demo}}</p></div>
+<br>
+
+<div class="col col-sm-6 col-md-4 rounded border border-dark mx-auto" id="recuadro">
+  <form class="p-2 m-2" [formGroup]="form" (ngSubmit)="submit()">
+    <div class="">
+      <h5>Palabra</h5>
+      <label for="palabra"></label>                    
+      <input type="text" formControlName="palabra" 
+              ngbPopover="Escriba una palabra" 
+              triggers="mouseenter:mouseleave" popoverTitle="¡Atención!"
+              > <!--name y id no son necesarios acá-->
+      </div>
+
+      <br>
+      <div class="">
+          <h5>Algoritmo</h5>
+          <label for="algoritmo"></label>
+          
+          <input type="text" formControlName="algoritmo"
+                  ngbPopover="Por el momento este campo no tiene ningún efecto" 
+                  triggers="mouseenter:mouseleave" popoverTitle="¡Atención!" 
+                  placement="end" 
+                  [closeDelay]="5000"
+          >
+      </div>
+      <hr>
+      <div>
+          <button class="btn btn-success" [disabled]="form.invalid">Codificar</button>
+      </div>
+  </form>  
+</div>
+
+
+
+</div>

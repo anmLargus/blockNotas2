@@ -19,6 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoginComponent } from './pages/login/login.component';
 import { HeadersInterceptor } from './services/headers.interceptor';
+import { EncoderComponent } from './pages/encoder/encoder.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { HeadersInterceptor } from './services/headers.interceptor';
     AddNotaComponent,
     EditNotaComponent,
     NavbarComponent,
-    LoginComponent
+    LoginComponent,
+    EncoderComponent
   ],
   imports: [
     BrowserModule,
