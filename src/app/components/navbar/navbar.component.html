@@ -17,7 +17,11 @@
           <a class="nav-link" aria-current="page" routerLink="/readme" (click)="isMenuCollapsed = true">Readme</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" aria-current="page" routerLink="/login" (click)="isMenuCollapsed = true">Login</a>
+          <a class="nav-link" aria-current="page" routerLink="/login" *ngIf="!isLogged" (click)="isMenuCollapsed = true">Login</a>
+        </li> 
+        <li class="nav-item active">
+          <button class="btn btn-light" *ngIf="isLogged" (click)="logout()">Cerrar Sesión</button>
+         
         </li> 
                  
       </ul>

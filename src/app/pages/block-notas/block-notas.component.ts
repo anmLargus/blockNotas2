@@ -54,8 +54,6 @@ export class BlockNotasComponent implements OnInit {
     alert("Para poder borrar primero debe Loguearse");
   }
 
-  logout() {
-    this.auth.logout();
-  }
+ 
 
 }
