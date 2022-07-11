@@ -14,9 +14,6 @@ export class ReadmeComponent implements OnInit {
     console.log("Esta logueado?: " + this.auth.isLogged());
   }
 
-  logout() {
-    console.log("apretó logout");
-    this.auth.logout();
-  }
+
 
 }

@@ -2,6 +2,7 @@
   <div class="d-flex justify-content-around">
     <button class="btn btn-success" (click)="gotoAdd()">Agregar Nota</button>
 
+    <button class="btn btn-light border border-danger" (click)="logout()" *ngIf="isLogged" >Logout</button>
   </div>
   <hr>
   <div>
