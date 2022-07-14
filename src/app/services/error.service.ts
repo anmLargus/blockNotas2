@@ -8,7 +8,7 @@ export class ErrorService {
   constructor() { }
 
   show(message: string) {
-    alert("Ocurrió un error (ver consola para más detalle)");
+    alert("Ocurrió un error (ver consola para mayor detalle)");
     console.log(message);
   }
 
