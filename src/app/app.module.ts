@@ -18,8 +18,9 @@ import { EditNotaComponent } from './pages/edit-nota/edit-nota.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoginComponent } from './pages/login/login.component';
-import { HeadersInterceptor } from './services/headers.interceptor';
 import { EncoderComponent } from './pages/encoder/encoder.component';
+import { AuthInterceptor } from './services/auth.interceptor';
+import { HttpErrorInterceptor } from './services/http-error.interceptor';
 
 @NgModule({
   declarations: [
@@ -47,11 +48,8 @@ import { EncoderComponent } from './pages/encoder/encoder.component';
     ReactiveFormsModule,
   ],
   providers: [
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: HeadersInterceptor,
-      multi: true
-    }
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })

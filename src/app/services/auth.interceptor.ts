@@ -9,12 +9,12 @@ import { Observable } from 'rxjs';
 import { AuthService } from './auth.service';
 
 @Injectable()
-export class HeadersInterceptor implements HttpInterceptor {
+export class AuthInterceptor implements HttpInterceptor {
 
   constructor( private auth: AuthService ) {}
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    
+
     if ( this.auth.isLogged() ) {
       request = request.clone({
         setHeaders: {
@@ -25,5 +25,4 @@ export class HeadersInterceptor implements HttpInterceptor {
 
     return next.handle(request);
   }
-  
 }

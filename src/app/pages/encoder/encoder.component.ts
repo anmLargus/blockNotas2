@@ -31,4 +31,5 @@ export class EncoderComponent implements OnInit {
     this.code.enviarPalabra({palabra, algoritmo}).subscribe( res => {this.demo = res.palabraCodificada} );
   }
 
+
 }
